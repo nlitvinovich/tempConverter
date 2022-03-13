@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tempConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lochlainn-riordan-AwAzZXf03n0-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="3bu-Wo-dLM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tempreture Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bww-U7-RNa">
+                                <rect key="frame" x="51.5" y="114" width="311" height="32"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ºC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kF-24-f0P">
+                                <rect key="frame" x="184.5" y="353" width="45" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="EUj-tV-1sF">
+                                <rect key="frame" x="40" y="433" width="334" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="Muo-u8-QFW"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="9zK-jA-gX8"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32ºF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcz-Is-mE3">
+                                <rect key="frame" x="179.5" y="513" width="55.5" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EUj-tV-1sF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="04v-Th-Xub"/>
+                            <constraint firstItem="3bu-Wo-dLM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5cH-o7-qTO"/>
+                            <constraint firstItem="3bu-Wo-dLM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="789-Ej-Em5"/>
+                            <constraint firstAttribute="trailing" secondItem="3bu-Wo-dLM" secondAttribute="trailing" id="9Pi-ob-0yW"/>
+                            <constraint firstItem="Bww-U7-RNa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fnl-69-Byr"/>
+                            <constraint firstItem="6kF-24-f0P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jkn-Fa-f8D"/>
+                            <constraint firstItem="zcz-Is-mE3" firstAttribute="top" secondItem="EUj-tV-1sF" secondAttribute="bottom" constant="50" id="Jwo-Ve-4LU"/>
+                            <constraint firstItem="zcz-Is-mE3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KYF-ly-5Qh"/>
+                            <constraint firstItem="3bu-Wo-dLM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VtC-x7-FCi"/>
+                            <constraint firstItem="EUj-tV-1sF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YJa-4M-Y1c"/>
+                            <constraint firstAttribute="bottom" secondItem="3bu-Wo-dLM" secondAttribute="bottom" id="ZAd-dU-bpr"/>
+                            <constraint firstItem="Bww-U7-RNa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="ddG-RP-ugR"/>
+                            <constraint firstItem="EUj-tV-1sF" firstAttribute="top" secondItem="6kF-24-f0P" secondAttribute="bottom" constant="50" id="eCK-et-jcv"/>
+                            <constraint firstAttribute="bottom" secondItem="3bu-Wo-dLM" secondAttribute="bottom" id="t6Q-th-MJy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="celciusLabel" destination="6kF-24-f0P" id="ubE-IA-S5R"/>
+                        <outlet property="fahLabel" destination="zcz-Is-mE3" id="LHZ-Mw-tMg"/>
+                        <outlet property="skider" destination="EUj-tV-1sF" id="Nq5-EJ-Ifz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lochlainn-riordan-AwAzZXf03n0-unsplash" width="4000" height="6000"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
